@@ -1,62 +1,66 @@
 <template>
-    <q-page class="flex flex-center row bg-accent text-primary">
-        <div class="row wrap items-center align-center justify-center">
-            <div class="row col items-center align-center q-py-sm">
-                <img alt="Eduardo Donato" src="~assets/logo.png" style="width: 200px; height: 200px" />
+    <q-page class="column justify-between text-primary gradient-bg">
+        <div class="text-center q-gutter-xs">
+            <q-btn
+                flat
+                size="md"
+                v-for="(link, index) in links"
+                :key="index"
+                color="primary"
+                :icon="link.icon"
+                :aria-label="link.caption"
+                type="a"
+                :href="link.url"
+                target="_blank"
+            >
+                <q-tooltip :delay="1000"> {{ link.caption }} </q-tooltip>
+            </q-btn>
+        </div>
 
-                <div class="q-ml-md text-left">
+        <div class="row wrap items-center justify-center">
+            <!-- the brand -->
+            <div class="column col-12 col-md-4 items-center align-center q-py-sm">
+                <img alt="Eduardo Donato" src="~assets/logo-transparent.png" style="width: 200px; height: 200px" />
+
+                <div class="text-center">
                     <div class="text-h6">Eduardo Donato</div>
                     <div class="text-subtitle2">Portefólio</div>
                 </div>
             </div>
 
-            <q-card class="col bg-primary text-accent flat">
-                <q-card-section class="q-pt-none">
-                    <div
-                        v-for="(app, index) in apps"
-                        :key="index"
-                        class="row no-wrap items-center align-center q-py-sm"
-                    >
+            <!-- the apps -->
+            <div class="column col-12 col-md-4 q-gutter-xs q-pa-sm items-center">
+                <q-card
+                    v-for="(app, index) in apps"
+                    :key="index"
+                    class="bg-primary text-accent"
+                    flat
+                    bordered
+                    style="width: 100%; max-width: 400px"
+                >
+                    <q-card-section horizontal>
                         <div class="bg-primary rounded-borders q-pa-sm">
                             <img :src="`app-logos/${app.icon}.png`" style="width: 100px; height: 100px" />
                         </div>
 
-                        <div class="q-ml-md text-left">
-                            <div>{{ app.title }}</div>
-                            <div>{{ app.caption }}</div>
-                        </div>
-                    </div>
-                </q-card-section>
-            </q-card>
+                        <q-card-section>
+                            <div>
+                                <div class="text-center q-mb-sm text-bold">{{ app.title }}</div>
+                                <div>{{ app.caption }}</div>
+                            </div>
+                        </q-card-section>
+                    </q-card-section>
+                </q-card>
+            </div>
         </div>
+
+        <div></div>
     </q-page>
 </template>
 
 <script setup>
-const apps = [
-    {
-        title: "Orçamentos do Rainério",
-        caption: "Orçamentos e Recibos com visualização para impressão",
-        icon: "rai-invoices",
-        url: "https://calculadora-simples-ebdonato.vercel.app/",
-    },
-    {
-        title: "Calculadora Simples",
-        caption: "Uma calculadora super simples, estilo R$1,99, implementada com Framework Quasar",
-        icon: "calculadora-simples",
-        url: "https://calculadora-simples-ebdonato.vercel.app/",
-    },
-    {
-        title: "PDF da Sarah",
-        caption: "Ferramenta para a Sarah agrupar PDFs",
-        icon: "pdf-sarah",
-        url: "https://pdf-sarah.vercel.app/",
-    },
-    {
-        title: "Treinos da Catharine",
-        caption: "Catharine Pacheco Training - Consultoria de Treino Online",
-        icon: "cp-training",
-        url: "https://catharine.web.app/",
-    },
-]
+import apps from "assets/apps.js"
+import links from "assets/links.js"
+
+document.title = "Eduardo Donato | Portefólio"
 </script>
