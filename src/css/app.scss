@@ -1,6 +1,1 @@
 // app global css in SCSS form
-.gradient-bg {
-    background: $accent;
-    background: -webkit-linear-gradient(to bottom, $accent, darken($accent, 20));
-    background: linear-gradient(to bottom, $accent, darken($accent, 20));
-}
