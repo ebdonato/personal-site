@@ -3,7 +3,7 @@ const apps = [
         title: "Orçamentos do Rainério",
         caption: "Orçamentos e Recibos com visualização para impressão",
         icon: "rai-invoices",
-        url: "https://calculadora-simples-ebdonato.vercel.app/",
+        url: "https://rainerio-invoices.web.app/",
     },
     {
         title: "Calculadora Simples",
@@ -19,7 +19,7 @@ const apps = [
     },
     {
         title: "Treinos da Catharine",
-        caption: "Catharine Pacheco Training - Consultoria de TreinosOnline",
+        caption: "Catharine Pacheco Training - Consultoria de Treinos Online",
         icon: "cp-training",
         url: "https://catharine.web.app/",
     },

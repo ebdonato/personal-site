@@ -39,14 +39,27 @@
                     style="width: 100%; max-width: 400px"
                 >
                     <q-card-section horizontal>
-                        <div class="bg-primary rounded-borders q-pa-sm">
-                            <img :src="`app-logos/${app.icon}.png`" style="width: 100px; height: 100px" />
+                        <div class="bg-primary rounded-borders q-pa-sm column justify-center">
+                            <div>
+                                <a :href="app.url">
+                                    <img :src="`app-logos/${app.icon}.png`" style="width: 100px; height: 100px" />
+                                </a>
+                            </div>
                         </div>
 
-                        <q-card-section>
-                            <div>
-                                <div class="text-center q-mb-sm text-bold">{{ app.title }}</div>
-                                <div>{{ app.caption }}</div>
+                        <q-card-section class="column justify-between">
+                            <div class="text-center q-mb-sm text-bold">{{ app.title }}</div>
+                            <div>{{ app.caption }}</div>
+                            <div class="text-right">
+                                <q-btn
+                                    icon="fa-solid fa-up-right-from-square"
+                                    size="xs"
+                                    dense
+                                    flat
+                                    type="a"
+                                    :href="app.url"
+                                    target="_blank"
+                                />
                             </div>
                         </q-card-section>
                     </q-card-section>
