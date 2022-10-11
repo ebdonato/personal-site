@@ -41,3 +41,17 @@ quasar build
 ### Customize the configuration
 
 See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+
+## Docker configuration
+
+### Criando Imagem Docker
+
+`docker build . -t ebdonato/personal-site:tag`
+
+### Criando um container com a imagem
+
+`docker run -d -p 8080:80 ebdonato/personal-site:tag`
+
+### Criando outra tags
+
+`docker tag ebdonato/personal-site:tag ebdonato/personal-site:new-tag`
