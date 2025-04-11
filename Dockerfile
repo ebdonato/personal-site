@@ -10,7 +10,7 @@ RUN npm run build
 
 # production-stage
 FROM nginx:stable-alpine as production-stage
-LABEL maintainer "Eduardo Donato"
+LABEL maintainer "Eduardo DONATO"
 COPY --from=build-stage /app/dist/spa /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]

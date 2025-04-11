@@ -22,7 +22,7 @@
         <q-footer class="bg-accent text-primary">
             <q-toolbar>
                 <q-toolbar-title>
-                    <div class="text-center text-bold">Eduardo Donato - Portefólio</div>
+                    <div class="text-center text-bold">Eduardo DONATO - Portfólio</div>
                 </q-toolbar-title>
             </q-toolbar>
         </q-footer>

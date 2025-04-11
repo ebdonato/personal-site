@@ -2,7 +2,7 @@
     <q-page class="flex flex-center justify-center text-primary bg-accent">
         <!-- the brand -->
         <div class="column col-12 col-md-4 items-center align-center q-py-sm">
-            <img alt="Eduardo Donato" src="~assets/logo-transparent.png" style="width: 300px; height: 300px" />
+            <img alt="Eduardo DONATO" src="~assets/logo-transparent.png" style="width: 300px; height: 300px" />
         </div>
 
         <!-- the apps -->
@@ -47,7 +47,6 @@
 
 <script setup>
 import apps from "assets/apps.js"
-import links from "assets/links.js"
 
-document.title = "Eduardo Donato | Portefólio"
+document.title = "Eduardo DONATO | Portfólio"
 </script>
