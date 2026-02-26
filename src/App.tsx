@@ -217,7 +217,7 @@ export default function App() {
           <footer className="mt-8 pt-8 border-t border-neutral-100 dark:border-neutral-800/50 text-center text-sm text-neutral-400 dark:text-neutral-500">
             <p>
               © {new Date().getFullYear()} Eduardo Donato. Construído com React
-              & Tailwind.
+              & Tailwind por Gemini.
             </p>
           </footer>
         </main>
