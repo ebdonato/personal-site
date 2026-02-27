@@ -94,12 +94,21 @@ export default function App() {
 
           {/* Cabeçalho / Hero */}
           <header className="mb-16">
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3">
-              Eduardo DONATO
-            </h1>
-            <h2 className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 font-medium mb-6">
-              Engenheiro de Software & Desenvolvedor Full Stack
-            </h2>
+            <div className="flex items-center gap-6 mb-6">
+              <div className="flex-1 min-w-0">
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white mb-3">
+                  Eduardo DONATO
+                </h1>
+                <h2 className="text-lg sm:text-xl text-neutral-500 dark:text-neutral-400 font-medium">
+                  Engenheiro de Software & Desenvolvedor Full Stack
+                </h2>
+              </div>
+              <img
+                src="/eu.jpg"
+                alt="Eduardo Donato"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-neutral-200 dark:border-neutral-700 shadow-md flex-shrink-0"
+              />
+            </div>
 
             <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed mb-6">
               Engenheiro Eletricista de formação com especialização em{" "}
