@@ -74,24 +74,6 @@ export default function App() {
         <main
           className={`max-w-2xl mx-auto px-6 py-12 sm:py-24 transition-all duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          {/* Top Bar - Botão de Tema */}
-          <div className="flex justify-end mb-10">
-            <button
-              onClick={toggleTheme}
-              className="p-2.5 rounded-full bg-neutral-200 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-all shadow-sm"
-              aria-label="Alternar tema"
-              title={
-                isDarkMode ? "Mudar para modo claro" : "Mudar para modo escuro"
-              }
-            >
-              {isDarkMode ? (
-                <Sun size={18} strokeWidth={2.5} />
-              ) : (
-                <Moon size={18} strokeWidth={2.5} />
-              )}
-            </button>
-          </div>
-
           {/* Cabeçalho / Hero */}
           <header className="mb-16">
             <div className="flex items-center gap-6 mb-6">
@@ -106,7 +88,13 @@ export default function App() {
               <img
                 src="/eu.jpg"
                 alt="Eduardo Donato"
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-neutral-200 dark:border-neutral-700 shadow-md flex-shrink-0"
+                onClick={toggleTheme}
+                title={
+                  isDarkMode
+                    ? "Mudar para modo claro"
+                    : "Mudar para modo escuro"
+                }
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-neutral-200 dark:border-neutral-700 shadow-md flex-shrink-0 cursor-pointer hover:scale-105 hover:shadow-lg transition-all duration-200"
               />
             </div>
 
@@ -223,11 +211,29 @@ export default function App() {
           </section>
 
           {/* Rodapé */}
-          <footer className="mt-8 pt-8 border-t border-neutral-100 dark:border-neutral-800/50 text-center text-sm text-neutral-400 dark:text-neutral-500">
-            <p>
-              © {new Date().getFullYear()} Eduardo Donato. Construído com React
-              & Tailwind por Gemini.
-            </p>
+          <footer className="mt-8 pt-2 border-t border-neutral-100 dark:border-neutral-800/50 text-sm text-neutral-400 dark:text-neutral-500">
+            <div className="flex items-center justify-between gap-3">
+              <p>
+                © {new Date().getFullYear()} Eduardo Donato. Construído com
+                React & Tailwind por Gemini.
+              </p>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800/80 text-neutral-500 dark:text-neutral-400 hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:text-neutral-700 dark:hover:text-neutral-200 transition-all shadow-sm"
+                aria-label="Alternar tema"
+                title={
+                  isDarkMode
+                    ? "Mudar para modo claro"
+                    : "Mudar para modo escuro"
+                }
+              >
+                {isDarkMode ? (
+                  <Sun size={16} strokeWidth={2.5} />
+                ) : (
+                  <Moon size={16} strokeWidth={2.5} />
+                )}
+              </button>
+            </div>
           </footer>
         </main>
       </div>
