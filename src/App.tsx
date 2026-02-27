@@ -130,7 +130,7 @@ export default function App() {
           </header>
 
           {/* Contatos */}
-          <section className="mb-16 flex flex-wrap gap-4">
+          <section className="mb-16 flex flex-wrap gap-4 justify-end">
             <a
               href="https://github.com/ebdonato"
               target="_blank"
