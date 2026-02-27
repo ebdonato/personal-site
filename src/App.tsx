@@ -16,7 +16,14 @@ export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(
     () => window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
-  const [language, setLanguage] = useState<"pt" | "en">("pt");
+  const [language, setLanguage] = useState<"pt" | "en">(() => {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+    if (lang === "pt" || lang === "en") return lang as "pt" | "en";
+
+    const browserLang = navigator.language || "";
+    return browserLang.toLowerCase().startsWith("pt") ? "pt" : "en";
+  });
 
   useEffect(() => {
     // Animação de entrada — defer para o browser pintar o estado inicial (opacity-0) primeiro
@@ -38,7 +45,13 @@ export default function App() {
   };
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "pt" ? "en" : "pt"));
+    setLanguage((prev) => {
+      const newLang = prev === "pt" ? "en" : "pt";
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", newLang);
+      window.history.replaceState({}, "", url);
+      return newLang;
+    });
   };
 
   const content = {
