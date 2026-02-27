@@ -29,7 +29,7 @@ Meu site pessoal / portfólio, construído com **React**, **TypeScript**, **Tail
 
 ### Pré-requisitos
 
-- **Node.js** ≥ 18
+- **Node.js** ≥ 20
 - **npm** (incluído com o Node.js)
 
 ### Instalação
