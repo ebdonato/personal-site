@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Eduardo Donato — Personal Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Meu site pessoal / portfólio, construído com **React**, **TypeScript**, **Tailwind CSS v4** e **Vite**.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## React Compiler
+- **Dark / Light mode** — respeita a preferência do sistema e permite alternância manual
+- **Design responsivo** — layout adaptado para mobile, tablet e desktop
+- **Animações suaves** — transições de entrada e micro-interações via CSS
+- **Ícones** — biblioteca [Lucide React](https://lucide.dev/) para ícones consistentes e leves
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+| Camada      | Tecnologia                                                       |
+| ----------- | ---------------------------------------------------------------- |
+| Framework   | [React 19](https://react.dev/)                                   |
+| Linguagem   | [TypeScript 5.9](https://www.typescriptlang.org/)                |
+| Estilização | [Tailwind CSS 4](https://tailwindcss.com/)                       |
+| Bundler     | [Vite 7](https://vite.dev/)                                      |
+| Ícones      | [Lucide React](https://lucide.dev/)                              |
+| Lint        | [ESLint](https://eslint.org/) + plugins React                    |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Primeiros Passos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Node.js** ≥ 18
+- **npm** (incluído com o Node.js)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/ebdonato/personal-site.git
+cd personal-site
+
+# Instale as dependências
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Scripts Disponíveis
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Servidor de desenvolvimento com HMR
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build de produção (TypeScript + Vite)
+npm run build
+
+# Pré-visualização do build de produção
+npm run preview
+
+# Verificação de lint
+npm run lint
 ```
+
+## 📁 Estrutura do Projeto
+
+```text
+personal-site/
+├── public/
+│   └── eu.jpg              # Foto de perfil / favicon
+├── src/
+│   ├── App.tsx              # Componente principal da aplicação
+│   ├── App.css              # Estilos do componente App
+│   ├── index.css            # Estilos globais + Tailwind
+│   ├── main.tsx             # Ponto de entrada React
+│   └── assets/              # Assets estáticos
+├── index.html               # Template HTML
+├── vite.config.ts           # Configuração do Vite
+├── tsconfig.json            # Configuração base do TypeScript
+├── tsconfig.app.json        # Configuração TS para a aplicação
+├── tsconfig.node.json       # Configuração TS para o Node
+├── eslint.config.js         # Configuração do ESLint
+└── package.json
+```
+
+## 📄 Licença
+
+Este projeto é de uso pessoal. Todos os direitos reservados.
+
+---
+
+Construído com ☕ por **Eduardo Donato**
