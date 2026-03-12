@@ -185,7 +185,7 @@ export default function App() {
                 </h2>
               </div>
               <img
-                src="/eu.jpg"
+                src="/eu.png"
                 alt="Eduardo Donato"
                 onClick={toggleTheme}
                 title={isDarkMode ? t.themeLight : t.themeDark}

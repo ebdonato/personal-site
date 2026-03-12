@@ -64,7 +64,7 @@ npm run lint
 ```text
 personal-site/
 ├── public/
-│   └── eu.jpg              # Foto de perfil / favicon
+│   └── eu.png              # Foto de perfil / favicon
 ├── src/
 │   ├── App.tsx              # Componente principal da aplicação
 │   ├── App.css              # Estilos do componente App
